@@ -9,6 +9,7 @@
         <module name="demo-spring-cloud-common" />
         <module name="demo-spring-cloud-gateway" />
         <module name="demo-spring-cloud-registry" />
+        <module name="demo-spring-cloud-user-service" />
       </profile>
     </annotationProcessing>
   </component>
