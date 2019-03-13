@@ -8,38 +8,29 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.demo.user</groupId>
-    <artifactId>demo-spring-cloud-user-service</artifactId>
+    <groupId>com.demo.config</groupId>
+    <artifactId>demo-spring-cloud-config</artifactId>
     <packaging>jar</packaging>
-    <name>demo-spring-cloud-user-service</name>
+    <name>demo-spring-cloud-config</name>
     <url>http://www.example.com</url>
 
     <dependencies>
         <dependency>
-            <groupId>com.demo.common</groupId>
-            <artifactId>demo-spring-cloud-common</artifactId>
-            <version>${project.parent.version}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
-        <finalName>demo-spring-cloud-user-service</finalName>
+        <finalName>demo-spring-cloud-config</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

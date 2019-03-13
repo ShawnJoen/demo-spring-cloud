@@ -1,0 +1,26 @@
+server:
+  port: 8180
+
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+spring:
+  application:
+    name: demo-config
+  security:
+    user:
+      name: userId
+      password: userPwd
+  cloud:
+    config:
+      server:
+        git:
+          # mkdir config-repo; cd config-repo; git init .; git add -A .; git commit -am "#"
+          uri: file:///D:\xampp\htdocs\java\shawn\demo-spring-cloud-config
+
+logging:
+  file: ./logs/${spring.application.name}/log
