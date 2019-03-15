@@ -15,15 +15,12 @@
     <url>http://www.example.com</url>
 
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
+
     </dependencies>
 
     <build>
         <finalName>demo-spring-cloud-common</finalName>
-        <resources>
+<!--        <resources>
             <resource>
                 <filtering>true</filtering>
                 <directory>src/main/resources</directory>
@@ -32,6 +29,6 @@
                     <include>application-${profileActive}.properties</include>
                 </includes>
             </resource>
-        </resources>
+        </resources>-->
     </build>
 </project>
