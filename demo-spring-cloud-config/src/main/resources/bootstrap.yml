@@ -21,6 +21,10 @@ spring:
         git:
           # mkdir config-repo; cd config-repo; git init .; git add -A .; git commit -am "#"
           uri: file:///D:\xampp\htdocs\java\shawn\demo-spring-cloud-config
+  zipkin:
+    #Download zipkin-server: https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/
+    #execute: java -jar zipkin-server-2.9.4-exec.jar
+    base-url: http://localhost:9411
 
 logging:
   file: ./logs/${spring.application.name}/log
