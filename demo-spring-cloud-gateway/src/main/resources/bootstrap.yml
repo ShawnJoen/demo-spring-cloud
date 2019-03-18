@@ -4,19 +4,35 @@ server:
 eureka:
   instance:
     prefer-ip-address: false
+    lease-renewal-interval-in-seconds: 2 # 5秒钟发送一次心跳
+    lease-expiration-duration-in-seconds: 4 # 10秒不发送就过期
   client:
     serviceUrl:
       defaultZone: http://localhost:9000/eureka/
 
-zuul:
-  routes:
-      user-service: /userService/**
-      order-service: /orderService/**
+#zuul:
+#  routes:
+#      user-service: /userService/**
+#      order-service: /orderService/**
 
 spring:
   application:
     name: demo-gateway
   cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/userService/** #to `user-service` Service
+          filters:
+            - StripPrefix=1 # trip `user-service`
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/orderService/**
+          filters:
+            - StripPrefix=1
     config:
       discovery:
         enabled: true

@@ -17,6 +17,7 @@
     <module>demo-spring-cloud-user-service</module>
     <module>demo-spring-cloud-config</module>
     <module>demo-spring-cloud-order-service</module>
+      <module>demo-spring-cloud-user2-service</module>
   </modules>
 
   <parent>

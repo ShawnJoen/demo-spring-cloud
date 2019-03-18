@@ -4,8 +4,8 @@ server:
 eureka:
   instance:
     prefer-ip-address: false
-    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
-    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    lease-renewal-interval-in-seconds: 2 # 5秒钟发送一次心跳
+    lease-expiration-duration-in-seconds: 4 # 10秒不发送就过期
   client:
     serviceUrl:
       defaultZone: http://localhost:9000/eureka/

@@ -8,24 +8,33 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.demo.gateway</groupId>
-    <artifactId>demo-spring-cloud-gateway</artifactId>
+    <groupId>com.demo.user2</groupId>
+    <artifactId>demo-spring-cloud-user2-service</artifactId>
     <packaging>jar</packaging>
-    <name>demo-spring-cloud-gateway</name>
+    <name>demo-spring-cloud-user2-service</name>
     <url>http://www.example.com</url>
 
     <dependencies>
-        <!--  <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-        </dependency>-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <groupId>com.demo.common</groupId>
+            <artifactId>demo-spring-cloud-common</artifactId>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -34,7 +43,7 @@
     </dependencies>
 
     <build>
-        <finalName>demo-spring-cloud-gateway</finalName>
+        <finalName>demo-spring-cloud-user2-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

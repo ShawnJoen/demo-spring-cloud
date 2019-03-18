@@ -13,7 +13,7 @@ eureka:
     fetch-registry: false
   server:
     enable-self-preservation: false
-    eviction-interval-timer-in-ms: 5000
+    eviction-interval-timer-in-ms: 4000
   zipkin:
     #Download zipkin-server: https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/
     #execute: java -jar zipkin-server-2.9.4-exec.jar

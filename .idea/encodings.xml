@@ -8,5 +8,6 @@
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-registry" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-user-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-spring-cloud-user2-service" charset="UTF-8" />
   </component>
 </project>
