@@ -26,7 +26,7 @@ spring:
           predicates:
             - Path=/userService/** #to `user-service` Service
           filters:
-            - StripPrefix=1 # trip `user-service`
+            - StripPrefix=1 # strip `user-service`
         - id: order-service
           uri: lb://order-service
           predicates:
