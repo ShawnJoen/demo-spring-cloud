@@ -6,6 +6,8 @@ spring:
     name: demo-registry
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://localhost:9000/eureka/

@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    prefer-ip-address: false
+    prefer-ip-address: true
     lease-renewal-interval-in-seconds: 2 # 5秒钟发送一次心跳
     lease-expiration-duration-in-seconds: 4 # 10秒不发送就过期
   client:
