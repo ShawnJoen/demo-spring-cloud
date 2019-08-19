@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.user2.dao.impl.UserDaoImpl">
+    <resultMap id="AllFieldsResultMap"  type="com.demo.common.entity.User">
+        <result column="id" 	        property="id" />
+        <result column="name"           property="name" />
+        <result column="age"            property="age" />
+    </resultMap>
+
+    <parameterMap id="User" type="com.demo.common.entity.User"/>
+
+    <sql id="table">`user`</sql>
+
+    <select id="findOneByIdToAllFields" resultMap="AllFieldsResultMap">
+        SELECT
+        `id`,`name`,`age`
+        FROM
+        <include refid="table"/>
+        WHERE
+        1
+        AND `id` = #{id}
+        LIMIT 1
+    </select>
+
+    <insert id="create" parameterMap="User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO
+        <include refid="table" />
+        (`name`,`age`)
+        VALUES
+        (#{name},#{age})
+    </insert>
+    
+</mapper>

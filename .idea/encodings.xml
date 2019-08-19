@@ -4,9 +4,11 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-spring-cloud-event-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-spring-cloud-txlcn-tm-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-cloud-user2-service" charset="UTF-8" />
   </component>

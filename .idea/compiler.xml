@@ -8,14 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-spring-cloud-common" />
         <module name="demo-spring-cloud-config" />
+        <module name="demo-spring-cloud-event-service" />
         <module name="demo-spring-cloud-gateway" />
         <module name="demo-spring-cloud-order-service" />
         <module name="demo-spring-cloud-registry" />
+        <module name="demo-spring-cloud-txlcn-tm-service" />
         <module name="demo-spring-cloud-user-service" />
         <module name="demo-spring-cloud-user2-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo-spring-cloud-rabbit-consumer" target="1.8" />
+      <module name="demo-spring-cloud-rabbit-producer" target="1.8" />
       <module name="demo-spring-cloud-zipkin" target="1.8" />
     </bytecodeTargetLevel>
   </component>

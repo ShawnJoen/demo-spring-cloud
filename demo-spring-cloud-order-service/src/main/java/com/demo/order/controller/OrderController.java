@@ -24,4 +24,9 @@ public class OrderController {
         return order;
     }
 
+    @PostMapping("/create/{name}/{status}")
+    public void create(@PathVariable("name") String name, @PathVariable("status") String status, HttpServletRequest request) {
+        orderService.create(name, status);
+    }
+
 }

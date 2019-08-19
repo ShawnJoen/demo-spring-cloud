@@ -4,7 +4,7 @@
     <resultMap id="AllFieldsResultMap"  type="com.demo.common.entity.Order">
         <result column="id" 	        property="id" />
         <result column="name"           property="name" />
-        <result column="age"            property="age" />
+        <result column="status"         property="status" />
     </resultMap>
 
     <parameterMap id="Order" type="com.demo.common.entity.Order"/>
@@ -13,7 +13,7 @@
 
     <select id="findOneByIdToAllFields" resultMap="AllFieldsResultMap">
         SELECT
-        `id`,`name`,`age`
+        `id`,`name`,`status`
         FROM
         <include refid="table"/>
         WHERE
@@ -21,4 +21,13 @@
         AND `id` = #{id}
         LIMIT 1
     </select>
+
+    <insert id="create" parameterMap="Order" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO
+        <include refid="table" />
+        (`name`,`status`)
+        VALUES
+        (#{name},#{status})
+    </insert>
+
 </mapper>

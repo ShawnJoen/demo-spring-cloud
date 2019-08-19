@@ -12,4 +12,12 @@ public class OrderDaoImpl extends BaseDao implements OrderDao {
         return super.getSqlSession().selectOne(super.getStatement("findOneByIdToAllFields"), id);
     }
 
+    @Override
+    public void create(final String name, final String status) {
+        final Order o = new Order();
+        o.setName(name);
+        o.setStatus(status);
+        super.getSqlSession().insert(super.getStatement("create"), o);
+    }
+
 }
